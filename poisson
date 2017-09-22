@@ -1,0 +1,10 @@
+poisson_pdf <- function(lamda, k) {
+  # Computes p(z,N|theta) = Bernoulli(theta|z,N)
+  pdf = ((exp(2)^-lamda)*(lamda^k))/factorial(k)
+  return(pdf)
+}
+
+lamda = (1:50)
+k = (4:12)
+plot(poisson_pdf(lamda, k))
+
